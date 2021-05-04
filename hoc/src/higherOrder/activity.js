@@ -10,17 +10,29 @@ import React, { useState } from "react";
 // present form state and button logic presentHandel sends as props.
 //Note: Two components used this state independently.
 
-const activity = (Member) => {
-  const NewMember = () => {
+//In functional component 'props' is used when other components send props to the teacher and student.
+//teacher and student component can't receive the props directly.
+//props directly comes to the hoc function 
+
+//count doesn't need if no one passed any parameters.
+
+const activity = (Member,count) => {
+  const NewMember = (props) => {
     const [present, setPresent] = useState(0);
 
     const presentHandel = () => {
-      setPresent(present + 1);
+        setPresent(present + 1);
+    //if any component sends paramter, then activity receive this.(for teacher adds 10)
+    //In teacher component it adds 10 because 10 as count passed from teacher component
+    //   setPresent(present + count);
     };
-
+    // console.log(props);
+    //destructor all collected props and sending as props to other component. 
     return (
-      <Member present={present} presentHandel={presentHandel} shift="morning" />
+      <Member present={present} presentHandel={presentHandel} shift="morning" {...props}/>
+      
     );
+    
   };
   return NewMember;
 };

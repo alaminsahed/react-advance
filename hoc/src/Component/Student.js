@@ -5,12 +5,16 @@ import activity from '../higherOrder/activity';
 //Student shift receives hoc function's props
 
 const Student = (props) => {
+
+    // Teacher receives the props from hoc and app.js file.
+    //props from app.js file go to the hoc and comes as props from hoc 
     
     return (
         <div>
            <h3>Student present count:{props.present}</h3>
            <h4>Student Shift:{props.shift}</h4>
-           <button onClick={props.presentHandel}>Teacher</button> 
+           <h5>Student responsibility:{props.fee}</h5>
+           <button onClick={props.presentHandel}>Student</button> 
         </div>
     );
 };

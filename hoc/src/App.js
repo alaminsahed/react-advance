@@ -1,7 +1,6 @@
-import './App.css';
-import Student from './Component/Student';
-import Teacher from './Component/Teacher';
-
+import "./App.css";
+import Student from "./Component/Student";
+import Teacher from "./Component/Teacher";
 
 //HOC- Higher Order Component
 // Hoc is a function that receive a component and returns a new component
@@ -9,10 +8,13 @@ import Teacher from './Component/Teacher';
 //Teacher and Student has a common activity. Go to school everyday
 
 function App() {
+
+  //teacher and student component can't receive the props directly.
+  //props directly comes to the hoc function
   return (
     <div>
-     <Teacher/>
-     <Student/>
+      <Teacher salary="salary" />
+      <Student fee="fee" />
     </div>
   );
 }
