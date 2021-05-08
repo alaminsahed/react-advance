@@ -5,6 +5,6 @@
 
 Topics
 * HOC
-* Render component
+* Render props
 
 <h5> Feel free to contribute </h5>
