@@ -45,7 +45,8 @@ const Counter = () => {
       {/* using only action type */}
       {/* <button onClick={()=>dispatch({type:"increment"})}>+</button>
             <button onClick={()=>dispatch({type: "decrement"})}>-</button> */}
-
+      
+      {/* Action type and pass dynamic value */}
       <button onClick={() => dispatch({ type: "increment", value: 3 })}>+</button>
       <button onClick={() => dispatch({ type: "decrement", value:3 })}>-</button>
     </div>
